@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".DiceRollerMain">
+
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:rowCount="3"
+        android:columnCount="1"
+        android:orientation="vertical">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#cccccc"
+            android:rowCount="2"
+            android:columnCount="3"
+            android:layout_column="0"
+            android:layout_row="0">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/facesLabel"
+                android:id="@+id/textView"
+                android:textSize="36sp"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:layout_margin="10dp"
+                android:layout_columnSpan="2"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dicesLabel"
+                android:id="@+id/textView2"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:textSize="36sp"
+                android:layout_marginLeft="10sp"
+                android:layout_columnSpan="2" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/baseNumberfaces"
+                android:id="@+id/faces"
+                android:layout_column="2"
+                android:layout_row="0"
+                android:layout_gravity="end" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/baseNumberdices"
+                android:id="@+id/dices"
+                android:layout_column="2"
+                android:layout_row="1"
+                android:layout_gravity="end" />
+
+        </GridLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:background="#cccccc">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/rollButton"
+                android:id="@+id/roll"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:textSize="36sp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/scrollView"
+            android:layout_gravity="fill_vertical"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:fillViewport="false">
+
+
+            <LinearLayout
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/linear">
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </GridLayout>
+
+</RelativeLayout>
